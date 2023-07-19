@@ -21,16 +21,28 @@ a{
     &_menu{
         display: flex;
         gap: 32px;
+        &_link{
+            color: #292F36;
+            text-align: center;
+            font-family: Jost;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%; /* 25px */
+        }
     }
 }
 .main{
     &_img{
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &_text{
         position: absolute;
         top: 40%;
-        left: 25%;
+        left: 35%;
         transform: translate(-50%, -50%);
         color: #292F36;
         font-family: 'DM Serif Display';
@@ -41,8 +53,8 @@ a{
     }
     &_subtext{
         position: absolute;
-        top: 55%;
-        left: 26%;
+        top: 57%;
+        left: 35%;
         transform: translate(-50%, -50%);
         color: #4D5053;
         font-family: 'Jost';
@@ -54,8 +66,8 @@ a{
     }
     &_button{
         position: absolute;
-        top: 65%;
-        left: 17%;
+        top: 72%;
+        left: 29%;
         transform: translate(-50%, -50%);
         border-radius: 18px;
         background: #292F36;
@@ -90,6 +102,107 @@ a{
             color: #4D5053;
             text-align: center;
             font-family: 'Jost';
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 33px */
+            letter-spacing: 0.22px;
+        }
+    }
+    .product-box{
+        display: grid;
+        gap: 80px;
+        grid-template-columns: repeat(2, 260px);
+        justify-content: space-around;
+        justify-items: center;
+        .product-item_description{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 25px;
+        }
+        .item_png1{
+            border-top-right-radius: 25%;
+        }
+        .item_png2{
+            border-top-left-radius: 25%;
+        }
+        .item_png3{
+            border-bottom-right-radius: 25%;
+        }
+        .item_png4{
+            border-bottom-left-radius: 25%;
+        }
+    }
+    .number-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        background-color: #F4F0EC;
+        padding: 100px 25px;
+        border-radius:25px;
+        .number_item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 100px;
+        }
+
+        .number_h2{
+            color: #CDA274;
+            font-family: DM Serif Display;
+            font-size: 85px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%; /* 106.25px */
+            letter-spacing: 1.7px;
+        }
+        .number_text{
+            color: #4D5053;
+            font-family: Jost;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 33px */
+            letter-spacing: 0.22px;
+        }
+        .number_item_info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .border{
+            border-left: 2px solid #CDA274;
+            height: 120px;
+        }
+    }
+    .bottom_text{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+        gap: 32px;
+
+        .bottom_header{
+            color: #292F36;
+            text-align: center;
+            font-family: DM Serif Display;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%; /* 62.5px */
+            letter-spacing: 1px;
+        }
+        .bottom_subtext{
+            color: #4D5053;
+            text-align: center;
+            font-family: Jost;
             font-size: 22px;
             font-style: normal;
             font-weight: 400;
