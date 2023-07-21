@@ -209,4 +209,79 @@ a {
   font-weight: 400;
   line-height: 150%; /* 33px */
   letter-spacing: 0.22px;
+}
+
+.bottom-box {
+  display: flex;
+  gap: 50px;
+}
+.bottom-box-item-sublink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+.bottom-box-item-sub {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 31.25px */
+  letter-spacing: 0.5px;
+}
+
+.container {
+  position: relative;
+}
+
+.bottom-box-png1 {
+  position: absolute;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.footer-box-item {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+}
+.footer-box-item .fbi-header {
+  color: #292F36;
+  font-family: "DM Serif Display";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 31.25px */
+}
+.footer-box-item .fbi-text {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 33px */
+  letter-spacing: 0.22px;
+}
+.footer-box-item .footer-box-item-text {
+  color: #4D5053;
+  font-family: "Jost";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 33px */
+  letter-spacing: 0.22px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h2>{{ text }}</h2>
+
+        <ol id="li">
+            <li>{{newText}}</li>
+        </ol>
+        <button v-on:click="ReverseText">Перевернуть</button>
+        <button v-on:click="Add">Доабвить</button>
+
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+    new Vue({
+        el: '#main',
+        li: '#li',
+        data:{
+            text: 'Перевернутый текст',
+            newText: 'Новый элемент',
+        },
+        methods: {
+             ReverseText(){
+                //var split = this.text.split('');
+                //var reverse = split.reverse();
+                //var join = reverse.join('');
+                //this.text = join;
+                this.text = this.text.split('').reverse().join('');
+             },
+             Add(){
+                var li = document.getElementById('li');
+                var addedLi = document.createElement('li');
+                addedLi.textContent = this.newText;
+                li.appendChild(addedLi);
+             }  
+        }
+
+        })
+    </script>
+</body>
+</html>
