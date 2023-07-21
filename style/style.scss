@@ -213,9 +213,12 @@ a{
 }
 .bottom-box{
     display: flex;
-    gap: 50px;
+    gap: 100px;
+    margin-bottom: 150px;
     &-item{
-        
+        border: 2px solid rgb(236, 236, 236);
+        border-radius:45px;
+        padding: 15px;
         &-sublink{
             display: flex;
             justify-content: space-between;
@@ -230,6 +233,8 @@ a{
             text-transform: capitalize;
         }
         &-sub{
+            margin-top: 50px;
+            margin-bottom: 50px;
             color: #292F36;
             font-family: 'DM Serif Display';
             font-size: 20px;
@@ -241,13 +246,29 @@ a{
     }
 }
 
-    .container{
+.container{
          position: relative;
     }
-   .bottom-box-png1{
+.bottom-box-png{
+    border-radius: 45px 45px 0 0;
+}
+.bottom-box-png1{
         position: absolute;
+        transform: translate(-50%, -50%);
+        top: 356%;
+        left:25.5%;
     }
+.bottom-box-png2{
+        position: absolute;
+        left:47%;
+        top: 354%;
 
+}
+.bottom-box-png3{
+    position: absolute;
+    left: 72%;
+    top: 354%;
+}
 .footer{
     &-box{
         display: flex;
@@ -291,3 +312,9 @@ a{
         }
     }
 }
+
+
+// События / Анимация
+
+.bottom-box-item:hover{background-color:rgb(236, 236, 236);}
+    
