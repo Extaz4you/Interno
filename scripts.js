@@ -48,4 +48,4 @@ Vue.component('Bedroom', {
     <p class="main_blog_text_two">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
   </div>`,
 });
-///
+// added hw
