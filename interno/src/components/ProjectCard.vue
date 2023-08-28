@@ -1,5 +1,5 @@
 <template>
-  <div class="projects__card">
+  <div class="projects__card" :data-id="project.dataid">
     <img
       :src="project.src"
       :alt="project.alt"
@@ -16,7 +16,7 @@
           <li class="projects__card-list-item">{{ project.field }}</li>
         </ul>
       </div>
-      <router-link to="/project" class="projects__card-arrow-box">
+      <router-link to="link" class="projects__card-arrow-box">
         <svg
           class="projects__card-arrow"
           width="10"
@@ -35,6 +35,7 @@
         </svg>
       </router-link>
     </div>
+    <slot class="star-image" />
   </div>
 </template>
 

@@ -1,15 +1,11 @@
 <template>
   <main class="main">
     <section class="banner center">
-      <Intro
+      <Banner
         :banner="banner"
         v-for="banner in homeBanner"
-        :key="banner.id"
-        :src="banner.src"
-        :alt="banner.alt"
-        :heading="banner.heading"
-        :paragraph="banner.paragraph"
         :buttonText="buttonText"
+        :link="link"
       />
     </section>
     <section class="projects center" id="projects">
@@ -19,16 +15,7 @@
         content of page lookings at its layouts points.
       </p>
       <div class="projects__images">
-        <ProjectCard
-          :project="project"
-          v-for="project in projects"
-          :key="project.id"
-          :src="project.src"
-          :alt="project.alt"
-          :title="project.title"
-          :subject="project.subject"
-          :field="project.field"
-        />
+        <ProjectCard :project="project" v-for="project in projects" />
       </div>
     </section>
     <div class="counter">
@@ -61,19 +48,12 @@
         content of a page when lookings at its layouts the points of using.
       </p>
       <div class="blog__cardbox-container">
-        <ArticleCard
-          :article="article"
-          v-for="article in cardArticles"
-          :key="article.id"
-          :src="article.src"
-          :alt="article.alt"
-          :heading="article.heading"
-          :date="article.date"
-          :buttonText="buttonText"
-        >
-          <router-link to="/blog-details" class="blog__button">{{
-            article.buttonText
-          }}</router-link>
+        <ArticleCard :article="article" v-for="article in cardArticles">
+          <template #button>
+            <router-link to="/blog-details" class="blog__button">{{
+              article.buttonText
+            }}</router-link></template
+          >
         </ArticleCard>
       </div>
     </section>
@@ -83,19 +63,20 @@
 <script>
 // @ is an alias to /src
 
-import Intro from "@/components/Intro.vue";
+import Banner from "@/components/Banner.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
 import ArticleCard from "@/components/ArticleCard.vue";
 
 export default {
   name: "HomeView",
   components: {
-    Intro,
+    Banner,
     ProjectCard,
     ArticleCard,
   },
   data() {
     return {
+      link: "/:CatchAll(.*)",
       buttonText: "Get Started",
       homeBanner: [
         {
@@ -114,7 +95,7 @@ export default {
           alt: "interio",
           title: "Modern Kitchen",
           subject: "Decor",
-          field: "Artchitecture",
+          field: "Architecture",
           class: "projects__card-image_1",
         },
         {
@@ -123,7 +104,7 @@ export default {
           alt: "interio",
           title: "Modern Kitchen",
           subject: "Decor",
-          field: "Artchitecture",
+          field: "Architecture",
           class: "projects__card-image_2",
         },
         {
@@ -132,7 +113,7 @@ export default {
           alt: "interio",
           title: "Modern Kitchen",
           subject: "Decor",
-          field: "Artchitecture",
+          field: "Architecture",
           class: "projects__card-image_3",
           classbottom: "projects__card-textbox_bottom",
         },
@@ -142,7 +123,7 @@ export default {
           alt: "interio",
           title: "Modern Kitchen",
           subject: "Decor",
-          field: "Artchitecture",
+          field: "Architecture",
           class: "projects__card-image_4",
           classbottom: "projects__card-textbox_bottom",
         },
@@ -157,16 +138,16 @@ export default {
           buttonText: "Kitchen Design",
         },
         {
-          id: "article-card-1",
-          src: require("../assets/blog_1.png"),
+          id: "article-card-2",
+          src: require("../assets/blog_2.png"),
           alt: "interior",
           heading: "Low Cost Latest Invented Interior Designing Ideas",
           date: "22 December,2022",
           buttonText: "Living Design",
         },
         {
-          id: "article-card-1",
-          src: require("../assets/blog_1.png"),
+          id: "article-card-2",
+          src: require("../assets/blog_3.png"),
           alt: "interior",
           heading: "Best For Any Office & Business Interior Solution",
           date: "25 December,2022",
@@ -177,4 +158,40 @@ export default {
   },
 };
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.banner :deep(.banner-box) {
+  position: relative;
+}
+.banner :deep(.banner__text) {
+  position: absolute;
+  max-width: 434px;
+  top: 208px;
+  left: 52px;
+}
+
+.banner :deep(.banner__heading) {
+  margin-bottom: 18px;
+  color: #292f36;
+  font-family: DM Serif Display;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.banner :deep(.banner__paragraph) {
+  margin-bottom: 21px;
+  color: #4d5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.22px;
+}
+
+.blog__cardbox-container :deep(.blog-post__latest-post-head) {
+  width: 341px;
+  margin-bottom: 50px;
+}
+</style>
